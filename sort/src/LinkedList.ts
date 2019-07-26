@@ -1,24 +1,24 @@
-import { Sortable } from './interfaces';
+import { Sorter } from './Sorter';
 
 class Node {
   next: Node | null = null;
   constructor(public data: number) {}
 }
 
-export class LinkedList implements Sortable {
+export class LinkedList extends Sorter {
   head: Node | null = null;
 
-  get print(): number[] {
+  public print(): void {
     let pointer = this.head;
     let result: number[] = [];
     while (pointer) {
       result.push(pointer.data);
       pointer = pointer.next;
     }
-    return result;
+    console.log(result);
   }
 
-  public at(index: number): Node | null {
+  protected at(index: number): Node | null {
     if (!this.head) {
       throw new Error('Index out of bounds.');
     }

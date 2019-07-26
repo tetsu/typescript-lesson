@@ -1,7 +1,9 @@
-import { Sortable } from './interfaces';
+import { Sorter } from './Sorter';
 
-export class CharactersCollection implements Sortable {
-  constructor(public data: string) {}
+export class CharactersCollection extends Sorter {
+  constructor(public data: string) {
+    super();
+  }
 
   compare(leftIndex: number, rightIndex: number): boolean {
     if (
@@ -27,5 +29,9 @@ export class CharactersCollection implements Sortable {
 
   get length() {
     return this.data.length;
+  }
+
+  print(): void {
+    console.log(this.data);
   }
 }
