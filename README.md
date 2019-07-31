@@ -30,3 +30,14 @@ npm install -g parcel-bundler
    ```
    json-server -w db.json
    ```
+
+### Run web on Typescript with Parcel
+
+1. Go to 'web' directory
+   ```
+   cd web
+   ```
+1. Run parcel
+   ```
+   parcel index.html
+   ```
