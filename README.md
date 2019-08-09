@@ -41,3 +41,11 @@ npm install -g parcel-bundler
    ```
    parcel index.html
    ```
+
+## npm install react-redux error
+
+Following command might fix this issue.
+
+```
+npm config set unsafe-perm true
+```
